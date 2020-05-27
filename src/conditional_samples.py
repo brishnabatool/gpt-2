@@ -72,10 +72,11 @@ def interact_model(
 
         # Open a file
         prompts = open("prompts.txt", "r")
-        raw_text = prompts.readline()    
+        raw_text = prompts.readline().rstrip()       
+        sample_count = 1;
         while True:
             # raw_text = input("Model prompt >>> ")
-            raw_text = prompts.readline()
+            raw_text = prompts.readline().rstrip()    
             if not raw_text:
                 print('Prompt should not be empty!')
                 break
@@ -91,7 +92,8 @@ def interact_model(
                 for i in range(batch_size):
                     generated += 1
                     text = enc.decode(out[i])
-                    print("=" * 40 + " SAMPLE " + str(generated) + " " + "=" * 40)
+                    # print("=" * 40 + " SAMPLE " + str(generated) + " " + "=" * 40)
+                    print("=" * 40 + " SAMPLE " + str(sample_count++) + " " + "=" * 40)
                     print(raw_text+text)
             print("=" * 80)
         prompts.close();
