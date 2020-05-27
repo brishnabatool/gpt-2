@@ -94,7 +94,7 @@ def interact_model(
                     text = enc.decode(out[i])
                     # print("=" * 40 + " SAMPLE " + str(generated) + " " + "=" * 40)
                     print("=" * 40 + " SAMPLE " + str(sample_count) + " " + "=" * 40)
-                    sample_count++
+                    sample_count += 1
                     print(raw_text+text)
             print("=" * 80)
         prompts.close();
