@@ -81,7 +81,7 @@ def interact_model(
                 break
                 # raw_text = input("Model prompt >>> ")
                 # raw_text = prompts.readline()
-            print("\\nprompt:" + raw_text + "\\n")
+            # print("\nprompt:" + raw_text + "\n")
             context_tokens = enc.encode(raw_text)
             generated = 0
             for _ in range(nsamples // batch_size):
