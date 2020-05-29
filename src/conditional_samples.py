@@ -19,6 +19,7 @@ def interact_model(
     top_k=0,
     top_p=1,
     models_dir='models',
+    promptfile='prompts.txt'
 ):
     """
     Interactively run the model
@@ -71,7 +72,8 @@ def interact_model(
         saver.restore(sess, ckpt)
 
         # Open a file
-        prompts = open("prompts.txt", "r")
+        # promptfile = "prompts" + model_name + ".txt"
+        prompts = open(promptfile, "r")
         raw_text = prompts.readline().rstrip()       
         sample_count = 1;
         while True:
