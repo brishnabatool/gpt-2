@@ -73,6 +73,7 @@ def interact_model(
 
         # Open a file
         # promptfile = "prompts" + model_name + ".txt"
+        print("ZZZZZZZZZ prompt file is " + promptfile + " ZZZZZZZZZZ")
         prompts = open(promptfile, "r")
         raw_text = prompts.readline().rstrip()       
         sample_count = 1;
