@@ -43,7 +43,7 @@ def interact_model(
     """
 
 
-    print("ZZZZZZZZZ prompt file is " + promptfile + " ZZZZZZZZZZ")
+    # print("ZZZZZZZZZ prompt file is " + promptfile + " ZZZZZZZZZZ")
         
     models_dir = os.path.expanduser(os.path.expandvars(models_dir))
     if batch_size is None:
